@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas</title>
+    <script>
+
+
+      window.addEventListener("load", function () {
+        const canvas = document.getElementById("color");
+        const context = canvas.getContext('2d');
+
+        context.fillStyle = "orange";//집
+        context.fillRect(260,500,500,500);
+        context.fillStyle = "black";//문
+        context.fillRect(440,850,120,150);
+        
+        context.beginPath(); //지붕
+        context.moveTo(500, 200);
+        context.lineTo(950, 500);
+        context.lineTo(100, 500);
+        context.fillStyle = "brown";
+        context.fill();
+        
+
+        context.beginPath(); //머리
+        context.arc(1800, 1000, 350, 0, Math.PI * 2);
+        context.lineWidth = 16;
+        context.stroke(); 
+
+        context.beginPath(); //몸
+        context.arc(1800, 2000, 650, 0, Math.PI * 2);
+        context.stroke();
+
+        context.beginPath(); //왼쪽 눈
+        context.arc(1650, 950, 50, 0, Math.PI * 2);
+        context.fillStyle = "black";
+        context.fill();
+
+        context.beginPath(); //오른쪽 눈
+        context.arc(1950, 950, 50, 0, Math.PI * 2);
+        context.fillStyle = "black";
+        context.fill();
+
+        context.beginPath(); //단추
+        context.arc(1800, 1650, 40, 0, Math.PI * 2);
+        context.arc(1800, 1800, 40, 0, Math.PI * 2);
+        context.arc(1800, 1950, 40, 0, Math.PI * 2);
+        context.arc(1800, 2100, 40, 0, Math.PI * 2);
+        context.arc(1800, 2250, 40, 0, Math.PI * 2);
+        context.arc(1800, 2400, 40, 0, Math.PI * 2);
+        context.fillStyle = "brown";
+        context.fill();
+
+        context.beginPath(); //코
+        context.moveTo(1800,1050);
+        context.lineTo(1500,1100);
+        context.lineTo(1800,1150);
+        context.fillStyle = "orange";
+        context.fill();
+
+      
+
+       
+   
+    
+    
+  
+      });
+
+    </script>
+</head>
+<body>
+ <canvas id="color"
+ width="3000";
+ height="3000";
+ ></canvas>   
+</body>
+</html>
